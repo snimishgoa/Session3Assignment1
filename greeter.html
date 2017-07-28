@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class Demo</title>
+        <script type="application/javascript" src="greeter.js"></script>
+        <script>
+            
+            var greeter = new Greeter();
+
+            function myFunction(user){
+                document.getElementById('header').innerHTML = greeter.greet(user);
+            }
+        </script>
+        <style>
+            input{
+                margin: 5px;
+            }
+            button{
+                margin: 5px;
+            }
+            #main{
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body onload="myFunction('Guest')">
+        <header>
+            <div id="header"></div>
+        </header>
+        <div id="main">
+            <input placeholder="Enter your name" type="text" id="user">
+            <button onclick="myFunction(document.getElementById('user').value)">Submit</button>
+        </div>
+    </body>
+</html>
